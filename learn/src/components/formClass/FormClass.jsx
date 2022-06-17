@@ -11,6 +11,8 @@ export const FormClass = ()=> {
     const [messages, setMessage] = useState([])
     const [visible, setVisible] = useState(true)
 
+
+
     const handleClick = () => {
         setMessage([...messages, value])
         setValue('')
@@ -19,7 +21,12 @@ export const FormClass = ()=> {
         setValue(ev.target.value)
     }
 
+
+
     return <>
+
+
+
         <button onClick={() => setVisible(!visible)}>{visible ? "Спрятать" : "Распрятать"} </button>
         {visible && <ul>
             {messages.map(message => <li>{message}</li>)}
